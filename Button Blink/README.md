@@ -1,21 +1,14 @@
-# Button Blink
-Now that you have looked at blinking the LED from some built in delay, but what if we wanted to control the state of the LED by a button? You may think "Why would I need a Microcontroller to perform the job of a switch?". And that is where you come in. The bare minimum for this part of the lab is to essentially replicate a switch with your development board.
+# Functionality
 
-# YOU NEED TO CREATE THE FOLLOWING FOLDERS
-* MSP430G2553
-* MSP430F5529
-* MSP430FR2311
-* MSP430FR5994
-* MSP430FR6989
+The function of this code was to allow one of the buttons on the Launchpad to toggle one of the LED's on the launchpad. This was achieved through polling. An infinite while loop would continuously check if the button was pressed, and when it was the LED would toggle. Each button needed to be configured with a pullup resistor to act corrctly, as the buttons created a short to ground.
 
-## README
-Remember to replace this README with your README once you are ready to submit. I would recommend either making a copy of this file or taking a screen shot. There might be a copy of all of these README's in a folder on the top level depending on the exercise.
+# Resources used
+The resource explorer was used to first implement this code. The code was observed, and modified to fit the needs of the project. Additionally, the class lab lecture notes were used to implement the code for this project.
 
-## Extra Work
-What can we do to make this a little bit more worthy of needing a microcontroller.
+# Difficulties
 
-### Button Based Speed Control
-Much like the UART controlled speed, what if you could cycle between speeds based on a button press? The speed could progress through a cycle of "Off-Slow-Medium-Fast" looping back when you hit the end.
+The main difficulty for this project was figuring out the small syntax errors that were popping up, and not with the actual MSP430 register functionality.  
 
-### Color Change
-What if upon a button press, the LED which was blinking changed. Some of the development boards contain two LEDs, so you could swap between a Red and a Green LED.
+# Differences between boards
+
+The only differences between the boards were the pins that were mapped to the buttons, as the first LED's are all mapped to P1.0. 
